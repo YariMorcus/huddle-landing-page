@@ -19,7 +19,7 @@ RULES FOR THIS FILE
 
 Imports all modules
 
-Project:    [project name]
+Project:    Huddle landing page
 Version:    1.0
 Assigned to:    Yari Morcus
 Primary use:    Portfolio project
@@ -28,5 +28,5 @@ Primary use:    Portfolio project
 // Import base/_index.scss entrypoint file
 @use 'base' as b;
 
-// Import components/_index.scss entrypoint file
-@use 'components' as c;
+// Import pages/_index.scss entrypoint file
+@use 'pages' as p;
