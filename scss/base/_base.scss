@@ -17,6 +17,10 @@ html {
 body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    background-image: url('../img/bg-mobile.svg');
+    background-repeat: no-repeat;
+    background-color: v.$violet;
+    background-position: left -5rem;
 }
 
 /* A elements that don't have a class get default styles */
