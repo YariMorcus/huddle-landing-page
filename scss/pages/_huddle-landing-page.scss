@@ -69,6 +69,15 @@
 
     @include m.breakpoint-md() {
       margin-top: 2rem;
+      padding: 1.5rem;
+      border-radius: 2.5rem;
+      box-shadow: 1px 3px 7px -1px rgba(0, 0, 0, 0.75);
+    }
+
+    &:hover {
+      color: v.$white;
+      background-color: v.$soft-magenta;
+      cursor: pointer;
     }
   }
 }
@@ -100,5 +109,11 @@
     height: 2.5rem;
     color: v.$white;
     text-align: center;
+
+    &:hover {
+      color: v.$soft-magenta;
+      border-color: v.$soft-magenta;
+      cursor: pointer;
+    }
   }
 }
