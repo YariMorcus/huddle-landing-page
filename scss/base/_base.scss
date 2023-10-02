@@ -26,15 +26,20 @@ body {
   background-image: url("../img/bg-mobile.svg");
   background-repeat: no-repeat;
   background-color: v.$violet;
-  background-position: left -1rem;
+  background-size: contain;
+  // background-position: left -1rem;
 
   @include m.breakpoint-md() {
     max-width: 75rem;
+    background-image: url("../img/bg-desktop.svg");
+    background-position: 3rem 0;
+    background-size: cover;
   }
 
   @include m.breakpoint-lg() {
     margin: 0 4rem;
     max-width: 115rem;
+    background-size: contain;
   }
 
   @include m.breakpoint-xl() {
