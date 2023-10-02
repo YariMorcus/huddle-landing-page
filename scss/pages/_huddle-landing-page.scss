@@ -6,14 +6,8 @@
 @use "../abstracts/variables" as v;
 
 .landing-header {
-  margin-top: 1rem;
-
-  &-logo {
-    display: inline-block;
-
-    &__img {
-      max-width: 12rem;
-    }
+  &-logo__img {
+    max-width: 12rem;
   }
 }
 
@@ -68,7 +62,6 @@
     margin-top: 3rem;
     padding: 1rem;
     width: 18rem;
-    max-width: 100%;
     font: 1.2rem "Open Sans", sans-serif;
     color: v.$violet;
     border: none;
