@@ -6,8 +6,13 @@
 @use "../abstracts/variables" as v;
 
 .landing-header {
+  margin-bottom: 3.5rem;
   &-logo__img {
     max-width: 12rem;
+
+    @include m.breakpoint-lg() {
+      max-width: 17rem;
+    }
   }
 }
 
