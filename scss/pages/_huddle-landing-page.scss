@@ -20,8 +20,12 @@
 .landing-container {
   @include m.breakpoint-md() {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 44rem;
     align-items: center;
+  }
+
+  @include m.breakpoint-lg() {
+    grid-template-columns: 1fr 55rem;
   }
 }
 
@@ -34,6 +38,10 @@
     text-align: left;
     padding-top: 4rem;
     align-self: start;
+  }
+
+  @include m.breakpoint-lg() {
+    padding-right: 11rem;
   }
 
   &__heading {
@@ -86,14 +94,13 @@
   margin-top: 4rem;
   display: flex;
   justify-content: center;
-  padding: 0 5.5rem;
 
   @include m.breakpoint-md() {
     justify-content: flex-end;
   }
 
-  @include m.breakpoint-md() {
-    padding: initial;
+  @include m.breakpoint-lg() {
+    padding-right: 11rem;
   }
 
   &__link:not(:first-child) {
@@ -108,7 +115,6 @@
     width: 2.5rem;
     height: 2.5rem;
     color: v.$white;
-    text-align: center;
 
     &:hover {
       color: v.$soft-magenta;

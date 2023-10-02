@@ -33,8 +33,12 @@ body {
   }
 
   @include m.breakpoint-lg() {
-    // max-width: 80rem;
-    max-width: 89rem;
+    margin: 0 4rem;
+    max-width: 115rem;
+  }
+
+  @include m.breakpoint-xl() {
+    margin: 0 auto;
   }
 }
 
