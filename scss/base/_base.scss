@@ -1,49 +1,49 @@
 // Import variables
-@use '../abstracts/variables' as v;
+@use "../abstracts/variables" as v;
 
 // Import mixins
-@use '../abstracts/mixins' as m;
+@use "../abstracts/mixins" as m;
 
 /* Set core root defaults */
 html {
-    font-size: 10px;
+  font-size: 10px;
 
-    &:focus-within {
-        scroll-behavior: smooth;
-    }
+  &:focus-within {
+    scroll-behavior: smooth;
+  }
 }
 
 /* Set core body defaults */
 body {
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
-    background-image: url('../img/bg-mobile.svg');
-    background-repeat: no-repeat;
-    background-color: v.$violet;
-    background-position: left -5rem;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-image: url("../img/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-color: v.$violet;
+  background-position: left -1rem;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-    text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
 img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 /* Disable all animations, transitions and smooth scroll for people that prefer not to see them*/
 @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 // .footer {
