@@ -23,15 +23,6 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
   }
-
-  &__mock-up {
-    // height: 33vh;
-    // background: no-repeat left/contain url("../img/illustration-mockups.svg");
-
-    // @include m.breakpoint-md() {
-    //   height: 50vh;
-    // }
-  }
 }
 
 .landing-article {
