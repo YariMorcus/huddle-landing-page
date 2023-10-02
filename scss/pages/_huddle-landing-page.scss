@@ -17,9 +17,14 @@
 }
 
 .landing-container {
+  &_mock-up {
+    grid-area: mockup;
+  }
+
   @include m.breakpoint-md() {
     display: grid;
     grid-template-columns: 1fr 44rem;
+    grid-template-areas: "mockup article" "footer footer";
     align-items: center;
   }
 
@@ -29,6 +34,7 @@
 }
 
 .landing-article {
+  grid-area: article;
   color: v.$white;
   text-align: center;
 
@@ -92,6 +98,7 @@
   margin-top: 4rem;
   display: flex;
   justify-content: center;
+  grid-area: footer;
 
   @include m.breakpoint-md() {
     justify-content: flex-end;
