@@ -1,6 +1,13 @@
 // > 768px
 @mixin breakpoint-md() {
-    @media (min-width: 768px) {
-        @content;
-    }
+  @media (min-width: 48em) {
+    @content;
+  }
+}
+
+// > 1024px
+@mixin breakpoint-lg() {
+  @media (min-width: 64em) {
+    @content;
+  }
 }
