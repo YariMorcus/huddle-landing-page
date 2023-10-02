@@ -25,8 +25,12 @@
   }
 
   &__mock-up {
-    height: 33vh;
-    background: no-repeat left/contain url("../img/illustration-mockups.svg");
+    // height: 33vh;
+    // background: no-repeat left/contain url("../img/illustration-mockups.svg");
+
+    // @include m.breakpoint-md() {
+    //   height: 50vh;
+    // }
   }
 }
 
@@ -35,8 +39,10 @@
   text-align: center;
 
   @include m.breakpoint-md() {
-    padding-left: 2rem;
+    margin-left: 4rem;
     text-align: left;
+    padding-top: 4rem;
+    align-self: start;
   }
 
   &__heading {
@@ -45,6 +51,7 @@
 
     @include m.breakpoint-md() {
       margin-top: 0;
+      font: 600 3rem "Poppins", sans-serif;
     }
   }
 
@@ -68,6 +75,10 @@
     border: none;
     border-radius: 2rem;
     box-shadow: 0px 3px 3px -1px rgb(0 0 0 / 75%);
+
+    @include m.breakpoint-md() {
+      margin-top: 2rem;
+    }
   }
 }
 
@@ -79,6 +90,10 @@
 
   @include m.breakpoint-md() {
     justify-content: flex-end;
+  }
+
+  @include m.breakpoint-md() {
+    padding: initial;
   }
 
   &__link:not(:first-child) {

@@ -15,14 +15,27 @@ html {
 
 /* Set core body defaults */
 body {
-  max-width: 27rem;
   margin: 0 auto;
+  max-width: 27rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   background-image: url("../img/bg-mobile.svg");
   background-repeat: no-repeat;
   background-color: v.$violet;
   background-position: left -1rem;
+
+  @include m.breakpoint-md() {
+    max-width: 75rem;
+  }
+
+  @include m.breakpoint-lg() {
+    // max-width: 80rem;
+    max-width: 89rem;
+  }
 }
 
 /* A elements that don't have a class get default styles */
