@@ -15,6 +15,17 @@
 
   <!-- custom CSS -->
   <style>
+    body,
+    main {
+      display: flex
+    }
+
+    .footer,
+    .landing-article {
+      color: hsl(0deg, 0%, 100%);
+      text-align: center
+    }
+
     *,
     ::after,
     ::before {
@@ -62,7 +73,6 @@
     }
 
     main {
-      display: flex;
       flex-direction: column;
       justify-content: center;
       flex: 1
@@ -71,12 +81,11 @@
     body {
       margin: 0 auto;
       max-width: 27rem;
-      display: flex;
       flex-direction: column;
       justify-content: center;
       text-rendering: optimizeSpeed;
       line-height: 1.5;
-      background-image: url(../img/bg-mobile.svg);
+      background-image: url(img/bg-mobile.svg);
       background-repeat: no-repeat;
       background-color: hsl(257deg, 40%, 49%);
       background-size: contain
@@ -86,7 +95,7 @@
       body {
         height: 100vh;
         max-width: 75rem;
-        background-image: url(../img/bg-desktop.svg);
+        background-image: url(img/bg-desktop.svg);
         background-position: 3rem 0;
         background-size: cover
       }
@@ -136,9 +145,7 @@
     .footer {
       padding: 0 1.28rem 1.28rem;
       font-family: "Lexend Deca", sans-serif;
-      color: hsl(0deg, 0%, 100%);
-      font-size: 1.2rem;
-      text-align: center
+      font-size: 1.2rem
     }
 
     .footer__link {
@@ -150,13 +157,13 @@
     }
 
     .footer__link:focus-visible {
-      outline: 2px solid hsl(0deg, 0%, 100%);
+      outline: solid 2px;
       border-radius: 1px
     }
 
     @font-face {
       font-family: Poppins;
-      src: url(../fonts/poppins-semibold.woff2) format("woff2"), url(../fonts/poppins-semibold.woff) format("woff"), url(../fonts/poppins-semibold.ttf) format("truetype");
+      src: url(fonts/poppins-semibold.woff2) format("woff2"), url(fonts/poppins-semibold.woff) format("woff"), url(fonts/poppins-semibold.ttf) format("truetype");
       font-weight: 600;
       font-style: normal;
       font-display: swap
@@ -164,7 +171,7 @@
 
     @font-face {
       font-family: "Open Sans";
-      src: url(../fonts/open-sans-regular.woff2) format("woff2"), url(../fonts/open-sans-regular.woff) format("woff"), url(../fonts/open-sans-regular.ttf) format("truetype");
+      src: url(fonts/open-sans-regular.woff2) format("woff2"), url(fonts/open-sans-regular.woff) format("woff"), url(fonts/open-sans-regular.ttf) format("truetype");
       font-weight: 400;
       font-style: normal;
       font-display: swap
@@ -172,7 +179,7 @@
 
     @font-face {
       font-family: Poppins;
-      src: url(../fonts/poppins-regular.woff2) format("woff2"), url(../fonts/poppins-regular.woff) format("woff"), url(../fonts/poppins-regular.ttf) format("truetype");
+      src: url(fonts/poppins-regular.woff2) format("woff2"), url(fonts/poppins-regular.woff) format("woff"), url(fonts/poppins-regular.ttf) format("truetype");
       font-weight: 400;
       font-style: normal;
       font-display: swap
@@ -186,33 +193,7 @@
       .landing-header {
         margin-bottom: 0
       }
-    }
 
-    @media (min-width:64em) {
-      .landing-header {
-        margin-bottom: 3.5rem
-      }
-    }
-
-    .landing-header-logo:focus-visible {
-      outline: 2px auto #fff
-    }
-
-    .landing-header-logo__img {
-      max-width: 12rem
-    }
-
-    @media (min-width:64em) {
-      .landing-header-logo__img {
-        max-width: 17rem
-      }
-    }
-
-    .landing-container_mock-up {
-      grid-area: mockup
-    }
-
-    @media (min-width:48em) {
       .landing-container {
         display: grid;
         grid-template-columns: 1fr 44rem;
@@ -221,32 +202,21 @@
       }
     }
 
-    @media (min-width:64em) {
-      .landing-container {
-        grid-template-columns: 1fr 55rem
-      }
+    .landing-header-logo:focus-visible {
+      outline: #fff auto 2px
+    }
+
+    .landing-header-logo__img {
+      max-width: 12rem
+    }
+
+    .landing-container_mock-up {
+      grid-area: mockup
     }
 
     .landing-article {
       margin-bottom: 4rem;
-      grid-area: article;
-      color: hsl(0deg, 0%, 100%);
-      text-align: center
-    }
-
-    @media (min-width:48em) {
-      .landing-article {
-        margin-left: 4rem;
-        text-align: left;
-        align-self: start
-      }
-    }
-
-    @media (min-width:64em) {
-      .landing-article {
-        padding-top: 4rem;
-        padding-right: 11rem
-      }
+      grid-area: article
     }
 
     .landing-article__heading {
@@ -255,6 +225,12 @@
     }
 
     @media (min-width:48em) {
+      .landing-article {
+        margin-left: 4rem;
+        text-align: left;
+        align-self: start
+      }
+
       .landing-article__heading {
         margin-top: 0;
         font: 600 3rem Poppins, sans-serif
@@ -283,16 +259,7 @@
     }
 
     .landing-article__button:focus-visible {
-      outline: 3px solid #db3ddb
-    }
-
-    @media (min-width:48em) {
-      .landing-article__button {
-        margin-top: 2rem;
-        padding: 1.5rem;
-        border-radius: 2.5rem;
-        box-shadow: 1px 3px 7px -1px rgba(0, 0, 0, .75)
-      }
+      outline: #db3ddb solid 3px
     }
 
     .landing-article__button:hover {
@@ -308,13 +275,24 @@
       grid-area: footer
     }
 
-    @media (min-width:48em) {
-      .landing-footer {
-        justify-content: flex-end
-      }
-    }
-
     @media (min-width:64em) {
+      .landing-header {
+        margin-bottom: 3.5rem
+      }
+
+      .landing-header-logo__img {
+        max-width: 17rem
+      }
+
+      .landing-container {
+        grid-template-columns: 1fr 55rem
+      }
+
+      .landing-article {
+        padding-top: 4rem;
+        padding-right: 11rem
+      }
+
       .landing-footer {
         padding-right: 11rem
       }
@@ -329,7 +307,7 @@
     }
 
     .landing-footer__link:focus-visible {
-      outline: 3px solid hsl(0deg, 0%, 100%);
+      outline: solid 3px;
       border-radius: 100%
     }
 
@@ -352,6 +330,17 @@
     }
 
     @media (min-width:48em) {
+      .landing-article__button {
+        margin-top: 2rem;
+        padding: 1.5rem;
+        border-radius: 2.5rem;
+        box-shadow: 1px 3px 7px -1px rgba(0, 0, 0, .75)
+      }
+
+      .landing-footer {
+        justify-content: flex-end
+      }
+
       .landing-footer__icon {
         width: 3.5rem;
         height: 3.5rem
