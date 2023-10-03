@@ -24,7 +24,6 @@ main {
 body {
   margin: 0 auto;
   max-width: 27rem;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,10 +33,10 @@ body {
   background-repeat: no-repeat;
   background-color: v.$violet;
   background-size: contain;
-  // background-position: left -1rem;
 
   @include m.breakpoint-md() {
     max-width: 75rem;
+    height: 100vh;
     background-image: url("../img/bg-desktop.svg");
     background-position: 3rem 0;
     background-size: cover;
@@ -46,7 +45,6 @@ body {
   @include m.breakpoint-lg() {
     margin: 0 4rem;
     max-width: 115rem;
-    // background-size: contain;
   }
 
   @include m.breakpoint-xl() {
