@@ -18,3 +18,9 @@
     @content;
   }
 }
+
+@mixin landscape-md() {
+  @media (min-width: 48em) and (max-width: 63em) and (orientation: landscape) {
+    @content;
+  }
+}

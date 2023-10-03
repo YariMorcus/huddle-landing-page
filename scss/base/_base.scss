@@ -35,11 +35,15 @@ body {
   background-size: contain;
 
   @include m.breakpoint-md() {
-    max-width: 75rem;
     height: 100vh;
+    max-width: 75rem;
     background-image: url("../img/bg-desktop.svg");
     background-position: 3rem 0;
     background-size: cover;
+  }
+
+  @include m.landscape-md() {
+    height: initial;
   }
 
   @include m.breakpoint-lg() {
