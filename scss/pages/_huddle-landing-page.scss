@@ -8,6 +8,14 @@
 .landing-header {
   margin-bottom: 3.5rem;
 
+  @include m.breakpoint-md() {
+    margin-bottom: 0;
+  }
+
+  @include m.breakpoint-lg() {
+    margin-bottom: 3.5rem;
+  }
+
   &-logo:focus-visible {
     outline: 2px auto white;
   }
@@ -47,11 +55,11 @@
   @include m.breakpoint-md() {
     margin-left: 4rem;
     text-align: left;
-    padding-top: 4rem;
     align-self: start;
   }
 
   @include m.breakpoint-lg() {
+    padding-top: 4rem;
     padding-right: 11rem;
   }
 
